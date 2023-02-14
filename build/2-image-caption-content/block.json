@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "adelcourte/image-caption-content",
+  "version": "1.0",
+  "title": "Image + Caption / Content",
+  "icon": "format-image",
+  "category": "adelcourte",
+  "description": "Left : image with caption over it ; Right : text content.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "caption": {
+      "type": "string",
+      "source": "text",
+      "selector": ".caption"
+    },
+    "pictureID": {
+      "type": "number",
+      "default": null
+    },
+    "pictureURL": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "src",
+      "selector": "img"
+    },
+    "pictureAlt": {
+      "type": "string",
+      "source": "attribute",
+      "attribute": "alt",
+      "selector": "img"
+    },
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": ".content"
+    },
+    "alignment": {
+      "type": "string",
+      "default": "left"
+    }
+  },
+  "textdomain": "adelcourte-gutenberg",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
